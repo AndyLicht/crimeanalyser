@@ -11,7 +11,7 @@ $('body').on('click','.projectchangelink',function()
     $.ajax({
 	    type:'GET',
 	    dataType: 'json',
-	    url: base_url+'/projekte/crimeanalyser/php/filter/gettimefilterdata_json.php',
+	    url: base_url+'/php/filter/gettimefilterdata_json.php',
 	    data: {project:$(this).attr('machinename'),filterart:'time'},
     })
     .done(function(response)
@@ -28,7 +28,7 @@ $('body').on('click','.projectchangelink',function()
     $.ajax({
 	type:'GET',
 	dataType: 'json',
-	url: base_url+'/projekte/crimeanalyser/php/style/getstyle_json.php',
+	url: base_url+'/php/style/getstyle_json.php',
 	data: {projectid:$(this).attr('projectid')},
     })
     .done(function(response)

@@ -7,9 +7,9 @@ $modal_impressum = "<div id='modal-impressum' class='modal fade'>
     					<h4 class='modal-title'>Impressum</h4>
 				</div>
 				<div class='modal-body'>
-				    Tim Balschmiter<br>
-				    Das <a href='https://github.com/AndyLicht/crimeanalyser'>Tool</a> ermöglicht die Verwaltung und Ansicht von Punktgeometrien im Hinblick auf die zeitliche Analyse. 
-				    Entwickelt auf Basis von:<br>
+				    Entwickelt und betreut von Tim Balschmiter<br>
+				    <p>Das <a href='https://github.com/AndyLicht/crimeanalyser'>Softwareprojekt</a> ermöglicht die Verwaltung und Ansicht von Punktgeometrien im Hinblick auf die zeitliche Analyse. Der Quellcode wird via <a href='https://github.com/AndyLicht/crimeanalyser'>GitHub</a> bereitgestellt, Sie haben auch die Möglichkeit <a href='https://github.com/AndyLicht/crimeanalyser/issues'>Bugs und Wünsche</a> zu äußern</p><br>
+				    Entwickelt auf Basis von:<br><br>
 				    <li><a href='http://openlayers.org/'>OpenLayers 3</a></li>
 				    <li><a href='https://jquery.com/'>jQuery</a></li>
 				    <li><a href='http://getbootstrap.com/'>Bootstrap</a></li>

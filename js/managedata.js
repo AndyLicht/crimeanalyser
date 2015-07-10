@@ -3,8 +3,6 @@
 * einen neuen Datensatz anlegen
 *
 */
-
-
 $('#newdata').on('click',function()
 {
     $('#dataaddform').show();
@@ -29,7 +27,7 @@ $('#savechangedata').on('click',function()
     var base_url = window.location.origin;
     $.ajax({
 	type:'POST',
-	url: base_url+'/projekte/crimeanalyser/php/data/changedata.php',
+	url: base_url+'/php/data/changedata.php',
 	data: {project:$('#currentproject').text(),oid:$('#changedataoid').val(),time:$('#changedatatime').val(),object:$('#changedataobject').val(),description:$('#changedatadescription').val(),location:$('#changedatalocation').val(),xcoor:$('#changedataxcoor').val(),ycoor:$('#changedataycoor').val()},
     })
     .done(function(response)
@@ -50,7 +48,7 @@ $('#savenewdata').on('click',function()
     var base_url = window.location.origin;
     $.ajax({
 	type:'POST',
-	url: base_url+'/projekte/crimeanalyser/php/data/createdata.php',
+	url: base_url+'/php/data/createdata.php',
 	data: {project:$('#currentproject').text(),oid:$('#newdataoid').val(),time:$('#newdatatime').val(),object:$('#newdataobject').val(),description:$('#newdatadescription').val(),location:$('#newdatalocation').val(),xcoor:$('#newdataxcoor').val(),ycoor:$('#newdataycoor').val()},
     })
     .done(function(response)
@@ -66,8 +64,6 @@ $('#savenewdata').on('click',function()
     });	
 });
 
-
-
 /*
 *
 *
@@ -76,14 +72,14 @@ $('#savenewdata').on('click',function()
 */
 $('#deletedata').on('click',function()
 {
-    if(Object.keys($('#projecttable').bootstrapTable('getAllSelections')).length>0)
+    if(Object.keys($('#datatable').bootstrapTable('getAllSelections')).length > 0)
     {
 	$('#data-statusmeldung').html('Vorgang wird bearbeitet');
 	var base_url = window.location.origin;
 	$.ajax({
 	    type:'POST',
-	    url: base_url+'/projekte/crimeanalyser/php/data/deletedata.php',
-	    data: {project:$('#currentproject').text(),todelete:$('#datatable').bootstrapTable('getAllSelections')}
+	    url: base_url+'/php/data/deletedata.php',
+	    data: {project:$('#currentproject').attr('machinename'),todelete:$('#datatable').bootstrapTable('getAllSelections')}
 	})
 	.done(function(response)
         {

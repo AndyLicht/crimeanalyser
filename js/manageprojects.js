@@ -21,7 +21,7 @@ $('#savenewproject').on('click',function()
 	var base_url = window.location.origin;
 	$.ajax({
 		type:'POST',
-		url: base_url+'/projekte/crimeanalyser/php/projects/createproject.php',
+		url: base_url+'/php/projects/createproject.php',
 		data: {projectname:$('#newprojectname').val(),projectdescription:$('#newprojectdescription').val()},
 	    })
 	    .done(function(response)
@@ -57,7 +57,7 @@ $('#deleteproject').on('click',function()
 	var base_url = window.location.origin;
 	$.ajax({
 	    type:'POST',
-	    url: base_url+'/projekte/crimeanalyser/php/projects/deleteproject.php',
+	    url: base_url+'/php/projects/deleteproject.php',
 	    data: {todelete:$('#projecttable').bootstrapTable('getAllSelections')}
 	})
 	.done(function(response)
@@ -91,7 +91,7 @@ function refresh_dropdown(base_url)
 
     $.ajax({
 	type:'POST',
-	url: base_url+'/projekte/crimeanalyser/php/projects/getprojects_dropdown.php',
+	url: base_url+'/php/projects/getprojects_dropdown.php',
 	data:{echo:'true'}
     })
     .done(function(response)

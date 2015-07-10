@@ -5,9 +5,9 @@
 
     foreach($_POST['todelete'] as $row)
     {
-	$query = 'Delete from '$_POST['project']' where oid ='.$row['id'].';';
+	$query = 'Delete from '.$_POST['project'].' where oid ='.$row['id'].';';
 	pg_query($query);
     }
-    echo 'Projekte erfolreich geloescht';
+    echo 'Projekte erfolreich gelöscht';
     pg_close($dbconn);
 ?>

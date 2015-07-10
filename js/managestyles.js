@@ -32,7 +32,7 @@ $('#savechangestyles').on('click',function()
     var base_url = window.location.origin;
     $.ajax({
 	type:'POST',
-	url: base_url+'/projekte/crimeanalyser/php/style/createstyle.php',
+	url: base_url+'/php/style/createstyle.php',
 	data: {projectid:$('#currentproject').attr('projectid'),status:$('#stylestatus').val(),object:$('#changestyleobject').val(),radius:$('#changestyleradius').val(),fillcolor:$('#changestylefillcolor').val(),strokecolor:$('#changestylestrokecolor').val(),strokewidth:$('#changestylestrokewidth').val()}
     })
     .done(function(response)
@@ -63,7 +63,7 @@ $('#deletestyles').on('click',function()
 	var base_url = window.location.origin;
 	$.ajax({
 	    type:'POST',
-	    url: base_url+'/projekte/crimeanalyser/php/style/deletestyle.php',
+	    url: base_url+'/php/style/deletestyle.php',
 	    data: {todelete:$('#stylestable').bootstrapTable('getAllSelections')}
 	})
 	.done(function(response)
