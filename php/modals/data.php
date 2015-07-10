@@ -8,40 +8,59 @@ $modal_data = "<div id='modal-data' class='modal fade'>
                         <h4 class='modal-title'>Falldaten</h4>
                     </div>
                     <div class='modal-body'>
-			<div class='customtoolbar col-lg-10'>
-				<form id='uploadForm' method='post' enctype='multipart/form-data'>
-				    <div class='customtoolbaritems col-lg-3'>
-					<div class='input-group'>
-            				    <span class='input-group-btn'>
-                				<span class='btn btn-default btn-file'><span class='glyphicon glyphicon-folder-open'></span><input name='filetoupload' id='filetoupload' type='file' accept='.txt'></span>
-            				    </span>
-            				    <input type='text'id='filetoimport' name='filetoimport' class='form-control'>
-        				</div>
-				    </div>
-				    <div class='customtoolbaritems col-lg-3'>
+			<nav class='navbar navbar-default'>
+			    <div class='modaltoolbar container-fluid'>
+				    <div class='btn-toolbar'>
 					<div class='btn-group'>
-					    <button type='submit' id='startimport' class='btn btn-default'>Import</button>
-					    <button data-toggle='dropdown' class='btn btn-default dropdown-toggle'>Daten <span data-label-placement=''>hinzufügen</span> <span class='caret'></span></button>
-					    <ul class='dropdown-menu'>
-    						<li>
-						    <input type='radio' id='ex4_1' name='option' value='1' checked=''>
-						    <label for='ex4_1'>hinzufügen</label>
-    						</li>
-    						<li>
-        					    <input type='radio' id='ex4_2' name='option' value='2'>
-        					    <label for='ex4_2'>ersetzen</label>
-						</li>
-					    </ul>
+					    <button type='button' class='btn btn-default navbar-btn' id='newdata'><span class='glyphicon glyphicon-plus'></span></button>
+					    <button type='button' class='btn btn-default navbar-btn' id='deletedata'><span class='glyphicon glyphicon-trash'></span></button>
+					</div>
+					<div class='btn-group'>
+					    <form method='get' class='navbar-form' action='files/template.xlsx'>
+						<button type='submit' class='btn btn-default' id='download_template'><span class='glyphicon glyphicon-download'></span></button>
+					    </form>
+					</div>
+					<div class='btn-group'>
+					    <form id='uploadForm' class='navbar-form' method='post' enctype='multipart/form-data'>
+						<div class='input-group'>
+    						    <span class='input-group-btn'>
+							<span class='btn btn-default btn-file'><span class='glyphicon glyphicon-folder-open'></span><input name='filetoupload' class='form-control' id='filetoupload' type='file' accept='.txt'></span>
+    						    </span>
+    						    <input type='text'id='filetoimport' name='filetoimport' class='form-control'>
+						    <button type='submit' id='startimport' class='btn btn-default'>Import</button>
+						    <button data-toggle='dropdown' class='btn btn-default dropdown-toggle'>Daten <span data-label-placement=''>hinzufügen</span> <span class='caret'></span></button>
+						    <ul class='dropdown-menu'>
+							<li>
+							    <input type='radio' id='ex4_1' name='option' value='1' checked=''>
+							    <label for='ex4_1'>hinzufügen</label>
+							</li>
+							<li>
+							    <input type='radio' id='ex4_2' name='option' value='2'>
+							    <label for='ex4_2'>ersetzen</label>
+							</li>
+						    </ul>
+
+						</div>
+						<div class='btn-group'>
+						    <button type='submit' id='startimport' class='btn btn-default'>Import</button>
+						    <button data-toggle='dropdown' class='btn btn-default dropdown-toggle'>Daten <span data-label-placement=''>hinzufügen</span> <span class='caret'></span></button>
+						    <ul class='dropdown-menu'>
+							<li>
+							    <input type='radio' id='ex4_1' name='option' value='1' checked=''>
+							    <label for='ex4_1'>hinzufügen</label>
+							</li>
+							<li>
+    							    <input type='radio' id='ex4_2' name='option' value='2'>
+    							    <label for='ex4_2'>ersetzen</label>
+							</li>
+						    </ul>
+						</div>
+					    </form>
 					</div>
 				    </div>
-			    </form>
-			    <div class='customtoolbaritems col-lg-3'>
-				<form method='get' action='files/template.xlsx'>
-				    <button type='submit' class='btn btn-default' id='download_template'><span class='glyphicon glyphicon-download-alt'></span></button>
-				</form>
 			    </div>
-			</div>
-                        <table id='datatable' data-toggle='table' data-search='true' data-url='' data-single-select='false' data-cache='false' data-height='299'>
+			</nav>
+                        <table id='datatable' data-toggle='table' data-search='false' data-url='' data-single-select='false' data-cache='false' data-height='299'>
                             <thead>
                                 <tr>
                                     <th data-field='state' data-checkbox='true'></th>
@@ -94,9 +113,6 @@ $modal_data = "<div id='modal-data' class='modal fade'>
                     <div class='modal-footer'>
                         <div id='data-statusmeldung'>
                         </div>
-                        <br>
-                        <button type='button' id='newdata' class='btn btn-success'>New Data</button>
-                        <button type='button' id='deletedata' class='btn btn-danger'>Delete Data</button>
                     </div>
                 </div>
             </div>
