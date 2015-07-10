@@ -1,0 +1,35 @@
+.map {
+        height: 800px;
+      }
+	  
+.navbar
+{
+	border: 0 !important;
+	margin-bottom:0 !important;
+	border-radius:0 !important;
+}
+.scroll-dropdown
+{
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+#mouse-position
+{
+	bottom:0px;
+} 
+
+#time-current
+{
+    visibility: hidden;
+}
+#time-count
+{
+    visibility: hidden;
+}
+
+
+.modal.in .modal-dialog
+{
+    width:75% !important;
+}
