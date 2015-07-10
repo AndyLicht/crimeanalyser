@@ -14,10 +14,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>CrimeAnalyser</title>
-	<link href="../../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../../js/libraries/bootstrap-table/src/bootstrap-table.css" rel="stylesheet">
-	<link href="../../js/libraries/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-	<link href="../../js/libraries/bootstrap_dropdowns_enhancement/dist/css/dropdowns-enhancement.css" rel="stylesheet">
+	<link href="css/libraries/bootstrap.min.css" rel="stylesheet">
+	<link href="js/libraries/bootstrap-table/src/bootstrap-table.css" rel="stylesheet">
+	<link href="js/libraries/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+	<link href="js/libraries/bootstrap_dropdowns_enhancement/dist/css/dropdowns-enhancement.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.6.0/ol.css" type="text/css">
 	<link href="css/overrides.css" rel="stylesheet">
 	<link href="css/map_overrides.css" rel="stylesheet">
@@ -114,12 +114,12 @@
 ?>
 
 
-	<script src="../../js/jquery-1.11.3.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/libraries/bootstrap-table/src/bootstrap-table.js"></script>
-	<script src="../../js/libraries/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
-	<script src="../../js/libraries/bootstrap_dropdowns_enhancement/dist/js/dropdowns-enhancement.js"></script>
-	<script src="../../js/libraries/ol3/build/ol.js" type="text/javascript"></script>
+	<script src="js/libraries/jquery-1.11.3.min.js"></script>
+	<script src="js/libraries/bootstrap.min.js"></script>
+	<script src="js/libraries/bootstrap-table/src/bootstrap-table.js"></script>
+	<script src="js/libraries/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
+	<script src="js/libraries/bootstrap_dropdowns_enhancement/dist/js/dropdowns-enhancement.js"></script>
+	<script src="js/libraries/ol3/build/ol.js" type="text/javascript"></script>
 	<script src="js/variables.js"></script>
 	<script src="js/mapcontrols.js"></script>
 	<script src="js/vectorlayer.js"></script>
