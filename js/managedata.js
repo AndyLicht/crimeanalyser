@@ -70,6 +70,7 @@ $('#savenewdata').on('click',function()
 * ein bestehendes Projekt loeschen, dabei wird ein Vorgang angestossen der saemtliche dazugehoerige Tabellen und Spalten loescht
 *
 */
+/*
 $('#deletedata').on('click',function()
 {
     if(Object.keys($('#datatable').bootstrapTable('getAllSelections')).length > 0)
@@ -96,4 +97,4 @@ $('#deletedata').on('click',function()
 	$('#data-statusmeldung').html('bitte mindestens einen Datensatz zum löschen wählen');
     }
 });
-
+*/

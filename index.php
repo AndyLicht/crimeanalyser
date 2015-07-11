@@ -134,5 +134,6 @@
 	<script src="js/mycolorpicker.js"></script>
 	<script src="js/importexcel.js"></script>
 	<script src="js/timefunction.js"></script>
+	<script src="js/deleteentry.js"></script>
     </body>
 </html>

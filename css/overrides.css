@@ -58,3 +58,13 @@
 {
     padding: 0 0 !important;
 }
+.alert
+{
+    margin-bottom: 0 !important;
+}
+
+.modalheader
+{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

@@ -4,9 +4,21 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
 	<div class='modal-content'>
 	    <div class='modal-header'>
 		<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
-		<h4 class='modal-title'>Styles</h4>
+		<div class='container-fluid modalheader'>
+		    <h4 class='modal-title'>Styles</h4>
+		    <div class='statusmeldung'></div>
+		</div>
 	    </div>
 	    <div class='modal-body'>
+		<nav class='navbar navbar-default'>
+		    <div class='modaltoolbar container-fluid'>
+			<div class='btn-toolbar'>
+			    <div class='btn-group'>
+				<button type='button' class='btn btn-default navbar-btn deletedata'><span class='glyphicon glyphicon-trash'></span></button>
+			    </div>
+			</div>
+		    </div>
+		</nav>
 		<table id='stylestable' data-toggle='table' data-url='' data-single-select='false' data-cache='false' data-height='299'>
 		    <thead>
 			<tr>
@@ -58,12 +70,6 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
                             <br>
                             <button id='savechangestyles' type='button' class='btn btn-default'>ändern</button>
                         </div>
-	    </div>
-	    <div class='modal-footer'>
-		<div id='statusmeldung'>
-		</div>
-		<br>
-		<button type='button' id='deletestyles' class='btn btn-danger'>Delete Styles</button>
 	    </div>
 	</div>
     </div>
