@@ -19,7 +19,7 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
 			</div>
 		    </div>
 		</nav>
-		<table id='stylestable' data-toggle='table' data-url='' data-single-select='false' data-cache='false' data-height='299'>
+		<table id='stylestable' class='datatable' data-toggle='table' data-url='' data-single-select='false' data-cache='false' data-height='299'>
 		    <thead>
 			<tr>
 			    <th data-field='state' data-checkbox='true'></th>

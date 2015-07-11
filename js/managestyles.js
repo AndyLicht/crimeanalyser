@@ -48,38 +48,3 @@ $('#savechangestyles').on('click',function()
 	//$('#styles-statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
     });
 });
-
-/*
-*
-*
-* ein bestehendes Projekt loeschen, dabei wird ein Vorgang angestossen der saemtliche dazugehoerige Tabellen und Spalten loescht
-*
-*/
-$('#deletestyles').on('click',function()
-{
-    if(Object.keys($('#stylestable').bootstrapTable('getAllSelections')).length>0)
-    {
-	$('#style-statusmeldung').html('Vorgang wird bearbeitet');
-	var base_url = window.location.origin;
-	$.ajax({
-	    type:'POST',
-	    url: base_url+'/php/style/deletestyle.php',
-	    data: {todelete:$('#stylestable').bootstrapTable('getAllSelections')}
-	})
-	.done(function(response)
-        {
-	    $('#styles-statusmeldung').html(response);
-	    $('#stylestable').bootstrapTable('refresh');
-	    $('#stylestable_default').bootstrapTable('refresh');
-	})
-	.fail(function()
-	{
-	    $('#statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
-	});
-    }
-    else
-    {
-	$('#data-statusmeldung').html('bitte mindestens einen Datensatz zum löschen wählen');
-    }
-});
-

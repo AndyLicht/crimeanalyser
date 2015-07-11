@@ -51,7 +51,7 @@ $modal_data = "<div id='modal-data' class='modal fade'>
 					</div>
 				    </div>
 				</nav>
-                    	    <table class='modaltable' id='datatable' data-toggle='table' data-search='false' data-url='' data-single-select='false' data-cache='false' data-height='299'>
+                    	    <table class='datatable' id='datatable' data-toggle='table' data-search='false' data-url='' data-single-select='false' data-cache='false' data-height='299'>
                         	<thead>
                             	    <tr>
                                 	<th data-field='state' data-checkbox='true'></th>

@@ -20,7 +20,7 @@ $modal_projects ="<div id='modal-projects' class='modal fade'>
 			</div>
 		    </div>
 		</nav>
-		<table id='projecttable' data-toggle='table' data-url='php/projects/getprojects_json.php' data-single-select='false' data-cache='false' data-height='299'>
+		<table id='projecttable' class='datatable' data-toggle='table' data-url='php/projects/getprojects_json.php' data-single-select='false' data-cache='false' data-height='299'>
 		    <thead>
     			<tr>
 			    <th data-field='state' data-checkbox='true'></th>

@@ -63,38 +63,3 @@ $('#savenewdata').on('click',function()
 	$('#data-statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
     });	
 });
-
-/*
-*
-*
-* ein bestehendes Projekt loeschen, dabei wird ein Vorgang angestossen der saemtliche dazugehoerige Tabellen und Spalten loescht
-*
-*/
-/*
-$('#deletedata').on('click',function()
-{
-    if(Object.keys($('#datatable').bootstrapTable('getAllSelections')).length > 0)
-    {
-	$('#data-statusmeldung').html('Vorgang wird bearbeitet');
-	var base_url = window.location.origin;
-	$.ajax({
-	    type:'POST',
-	    url: base_url+'/php/data/deletedata.php',
-	    data: {project:$('#currentproject').attr('machinename'),todelete:$('#datatable').bootstrapTable('getAllSelections')}
-	})
-	.done(function(response)
-        {
-	    $('#data-statusmeldung').html(response);
-	    $('#datatable').bootstrapTable('refresh');
-	})
-	.fail(function()
-	{
-	    $('#statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
-	});
-    }
-    else
-    {
-	$('#data-statusmeldung').html('bitte mindestens einen Datensatz zum löschen wählen');
-    }
-});
-*/

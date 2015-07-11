@@ -41,48 +41,6 @@ $('#savenewproject').on('click',function()
     }
 });
 
-
-
-/*
-*
-*
-* ein bestehendes Projekt loeschen, dabei wird ein Vorgang angestossen der saemtliche dazugehoerige Tabellen und Spalten loescht
-*
-*/
-$('#deleteproject').on('click',function()
-{
-    if(Object.keys($('#projecttable').bootstrapTable('getAllSelections')).length>0)
-    {
-	$('#statusmeldung').html('Vorgang wird bearbeitet');
-	var base_url = window.location.origin;
-	$.ajax({
-	    type:'POST',
-	    url: base_url+'/php/projects/deleteproject.php',
-	    data: {todelete:$('#projecttable').bootstrapTable('getAllSelections')}
-	})
-	.done(function(response)
-        {
-	    $('#statusmeldung').html(response);
-	    $('#projecttable').bootstrapTable('refresh');
-	    refresh_dropdown(base_url);
-	})
-	.fail(function()
-	{
-	    $('#statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
-	});
-    }
-    else
-    {
-	$('#statusmeldung').html('bitte mindestens ein Projekt zum loeschen waehlen');
-    }
-});
-
-/*
-*
-* Beim Anlegen und Loeschen von Projekten aendert sich auch das DropDown-Menue dieses wird ueber folgende Funktion aktualisiert
-*
-*/
-
 function refresh_dropdown(base_url)
 {
     $('#currentproject').html('Projekt <span class="caret"></span>');

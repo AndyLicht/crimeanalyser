@@ -2,7 +2,7 @@
     $databasesettings = parse_ini_file('databaseconnection.ini');
     $conn_string = 'host='.$databasesettings['host'].' port='.$databasesettings['port'].' dbname='.$databasesettings['database'].' user='.$databasesettings['user'].' password='.$databasesettings['password'];
     $dbconn = pg_connect($conn_string);
-
+    var_dump($_POST);
     if($_POST['modal'] == 'modal-projects')
     {
 	foreach($_POST['todelete'] as $row)
@@ -31,7 +31,13 @@
     };
     if($_POST['modal'] == 'modal-styles')
     {
-	
+	foreach($_POST['todelete'] as $row)
+	{
+	    $query = 'Delete from styles where oid ='.$row['oid'].';';
+	    echo $query;
+	    pg_query($query);
+	}
+	echo 'Styles erfolgreich auf default Werte gesetzt';
     };
 
 ?>
