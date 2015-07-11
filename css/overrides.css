@@ -9,7 +9,7 @@
     position: relative;
     overflow: hidden;
 }
-.btn-file input[type=file] 
+.btn-file input[type=file]
 {
     position: absolute;
     top: 0;
@@ -26,11 +26,6 @@
     display: block;
 }
 
-
-.customtoolbar, .customtoolbaritems
-{
-    padding-left: 0px !important;
-}
 
 .fixed-table-toolbar .bars, .fixed-table-toolbar .search, .fixed-table-toolbar .columns
 {
@@ -51,8 +46,15 @@
       margin-right: 10px;
 }
 
+
+
 .modaltoolbar
 {
     margin-left: 0px !important;
     padding-left: 0px !important;
+}
+
+.navbar-form
+{
+    padding: 0 0 !important;
 }
