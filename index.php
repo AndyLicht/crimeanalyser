@@ -135,5 +135,6 @@
 	<script src="js/importexcel.js"></script>
 	<script src="js/timefunction.js"></script>
 	<script src="js/deleteentry.js"></script>
+	<script src="js/createentry.js"></script>
     </body>
 </html>

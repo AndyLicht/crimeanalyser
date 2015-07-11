@@ -32,14 +32,13 @@ $modal_projects ="<div id='modal-projects' class='modal fade'>
 		    </thead>
 		</table>
 		<br>
-		<br>
-		<div id='projectform'>
-		    <input type='text' class='form-control' id='newprojectname' placeholder='Projektname'>
+		<form class='createitem-formular'action='php/create.php' title='' method='post'>
+		    <input type='text' class='form-control myforminput' id='projectname' placeholder='Projektname'>
 		    <br>
-		    <textarea class='form-control' rows='5'id='newprojectdescription' placeholder='Projektbeschreibung'></textarea>
+		    <textarea class='form-control myforminput' rows='5' id='projectbeschreibung' placeholder='Projektbeschreibung'></textarea>
 		    <br>
-		    <button id='savenewproject' type='button' class='btn btn-default'>Anlegen</button>
-		</div>
+		    <button type='submit' class='btn btn-default createitemsubmit'>Projekt anlegen</button>
+		</form>
 	    </div>
 	</div>
     </div>

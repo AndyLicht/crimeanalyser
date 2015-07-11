@@ -31,7 +31,6 @@ $('body').on('click','#deletedatas',function()
     })
     .done(function(response)
     {
-	//console.log(response);
 	//Statusmeldungen ändern
 	$(modal).find('div.statusmeldung').html('<br><div class="alert alert-success" role="alert">'+response+'</div>');
 	//entsprechende Tabellen aktualisieren
@@ -45,9 +44,6 @@ $('body').on('click','#deletedatas',function()
 	$(this).closest('.modal').find('div.statusmeldung').html('<br><div class="alert alert-danger" role="alert">Bei der Verbindung zum Server ist leider etwas schief gegangen, bitte wenden Sie sich an den Administrator.</div>');
     });
 });
-
-
-
 
 $('body').on('click','#canceldelete',function()
 {
