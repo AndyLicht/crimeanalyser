@@ -84,26 +84,26 @@
 	<div class="row">
 	    <div class="col-md-10 map" id='ol3map'></div>
 	    <div class="col-md-2">
-	        <div id="infofield"></div>
-		<div id="legend" class="img-responsive" alt="Platz für eine Legende"></div>
-		    <div class="sidebar-module sidebar-module-inset">
-			<h4>Koordinaten:</h4>
-			<div id="epsg3857">
-			    <h5>EPSG:3857<h5>
-			    <div id="mouse-position-3857"></div>
-			</div>
-			<div id="epsg4326">
-			    <h5>EPSG:4326</h5>
-			    <div id="mouse-position-4326"></div>
-			</div>
-			<br>
-			<br>
-			<div id="scaleline">
-			</div>
+		<div class="sidebar-module sidebar-module-inset">
+		    <h4>Koordinaten:</h4>
+		    <div id="epsg3857">
+		        <h5>EPSG:3857<h5>
+		        <div id="mouse-position-3857"></div>
+		    </div>
+		    <div id="epsg4326">
+		        <h5>EPSG:4326</h5>
+		        <div id="mouse-position-4326"></div>
+		    </div>
+		    <div id="scaleline"></div>
+		    <br>
+		    <div>
+		        <h4>Legende</h4>
+		        <div id="legende"></div>
 		    </div>
 		</div>
 	    </div>
 	</div>
+    </div>
 
 <?php
     echo $modal_data;
@@ -130,7 +130,6 @@
 	<script src="js/manageprojects.js"></script>
 	<script src="js/changeproject.js"></script>
 	<script src="js/managedata.js"></script>
-	<script src="js/managestyles.js"></script>
 	<script src="js/mycolorpicker.js"></script>
 	<script src="js/importexcel.js"></script>
 	<script src="js/timefunction.js"></script>

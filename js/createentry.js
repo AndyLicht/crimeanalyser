@@ -75,7 +75,6 @@ $(".createitem-formular").submit(function(event)
     var posting = $.post(url,postdata);
     posting.done(function( response )
     {
-	console.log(response);
 	$(modal).find('div.statusmeldung').html(response);
 	//entsprechende Tabellen aktualisieren
 	$(modal).find('table').each(function()

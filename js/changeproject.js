@@ -56,7 +56,8 @@ $('body').on('click','.projectchangelink',function()
     {
     });
 
-    newsource = new ol.source.Vector({
+    newsource = new ol.source.Vector(
+    {
         url: 'php/data/getdata_geojson.php?machinename='+$(this).attr('machinename'),
 	format: new ol.format.GeoJSON()
     });
