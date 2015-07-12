@@ -18,12 +18,12 @@
 	<link href="js/libraries/bootstrap-table/src/bootstrap-table.css" rel="stylesheet">
 	<link href="js/libraries/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 	<link href="js/libraries/bootstrap_dropdowns_enhancement/dist/css/dropdowns-enhancement.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.6.0/ol.css" type="text/css">
+	<link rel="stylesheet" href="js/libraries/ol3/css/ol.css" type="text/css">
 	<link href="css/overrides.css" rel="stylesheet">
 	<link href="css/map_overrides.css" rel="stylesheet">
     </head>
     <body>
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
     	    <div class="container-fluid">
     		<div class="navbar-header">
         	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -85,17 +85,6 @@
 	    <div class="col-md-10 map" id='ol3map'></div>
 	    <div class="col-md-2">
 		<div class="sidebar-module sidebar-module-inset">
-		    <h4>Koordinaten:</h4>
-		    <div id="epsg3857">
-		        <h5>EPSG:3857<h5>
-		        <div id="mouse-position-3857"></div>
-		    </div>
-		    <div id="epsg4326">
-		        <h5>EPSG:4326</h5>
-		        <div id="mouse-position-4326"></div>
-		    </div>
-		    <div id="scaleline"></div>
-		    <br>
 		    <div>
 		        <h4>Legende</h4>
 		        <div id="legende"></div>
@@ -104,6 +93,25 @@
 	    </div>
 	</div>
     </div>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-bottom">
+	    <div class="row">
+		<div class="col-md-2">
+		    <div id="epsg3857">
+			<h5>EPSG:3857<h5>
+			<div id="mouse-position-3857"></div>
+		    </div>
+		</div>
+		<div class="col-md-1">
+		    <div id="epsg4326">
+			<h5>EPSG:4326<h5>
+			<div id="mouse-position-4326"></div>
+		    </div>
+		</div>
+		<div class="col-md-1">
+		    <div id="scaleline"></div>
+		</div>
+	    </div>
+    </nav>
 
 <?php
     echo $modal_data;
