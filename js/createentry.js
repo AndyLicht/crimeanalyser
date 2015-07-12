@@ -26,11 +26,17 @@ $(".createitem-formular").submit(function(event)
     });
     postdata['modal'] = $(this).closest('.modal').attr('id');
     postdata['project'] = $('#currentproject').attr('machinename');
-
+    
     /* Send the data using post */
     var posting = $.post(url,postdata);
-    posting.done(function( data )
+    posting.done(function( response )
     {
-	console.log(data);
+	console.log(response);
+	$(modal).find('div.statusmeldung').html(response);
+	//entsprechende Tabellen aktualisieren
+	$(modal).find('table').each(function()
+	{
+	    $(this).bootstrapTable('refresh');
+	});
     });
 });

@@ -32,7 +32,7 @@ $('body').on('click','#deletedatas',function()
     .done(function(response)
     {
 	//Statusmeldungen ändern
-	$(modal).find('div.statusmeldung').html('<br><div class="alert alert-success" role="alert">'+response+'</div>');
+	$(modal).find('div.statusmeldung').html(response);
 	//entsprechende Tabellen aktualisieren
 	$(modal).find('table').each(function()
 	{
