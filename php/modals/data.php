@@ -66,39 +66,21 @@ $modal_data = "<div id='modal-data' class='modal fade'>
                         	</thead>
                     	    </table>
                     	    <br>
-                    	    <div id='dataaddform'>
-                        	<input type='text' class='form-control' id='newdatatime' placeholder='Zeit'>
+			    <form class='createitem-formular'action='php/create.php' title='' method='post'>
+                        	<input type='text' class='form-control myforminput' id='datatime' placeholder='Zeit'>
                         	<br>
-				<input type='text' class='form-control' id='newdataobject' placeholder='Objekt'>
+				<input type='text' class='form-control myforminput' id='dataobject' placeholder='Objekt'>
                         	<br>
-				<textarea class='form-control' rows='5'id='newdatadescription' placeholder='Beschreibung'></textarea>
+				<textarea class='form-control myforminput' rows='5'id='datadescription' placeholder='Beschreibung'></textarea>
                         	<br>
-				<input class='form-control' id='newdatalocation' placeholder='Location'>
+				<input class='form-control myforminput' id='datalocation' placeholder='Location'>
                         	<br>
-				<input class='form-control' id='newdataxcoor' placeholder='X-Koordinate'>
+				<input class='form-control myforminput' id='dataxcoor' placeholder='X-Koordinate'>
                         	<br>
-				<input class='form-control' id='newdataycoor' placeholder='Y-Koordinate'>
+				<input class='form-control myforminput' id='dataycoor' placeholder='Y-Koordinate'>
                         	<br>
-                        	<button id='savenewdata' type='button' class='btn btn-default'>Anlegen</button>
-                    	    </div>
-			    <div id='datachangeform'>
-				<p type='text' id='changedataoid'><p>
-                        	<br>
-                        	<input type='text' class='form-control' id='changedatatime' placeholder='Zeit'>
-                        	<br>
-				<input type='text' class='form-control' id='changedataobject' placeholder='Objekt'>
-                        	<br>
-				<textarea class='form-control' rows='5'id='changedatadescription' placeholder='Beschreibung'></textarea>
-                        	<br>
-				<input class='form-control' id='changedatalocation' placeholder='Location'>
-                		<br>
-				<input class='form-control' id='changedataxcoor' placeholder='X-Koordinate'>
-                        	<br>
-				<input class='form-control' id='changedataycoor' placeholder='Y-Koordinate'>
-                        	<br>
-                        	<button id='savechangedata' type='button' class='btn btn-default'>Aendern</button>
-                    	    </div>
-		    	    <br>
+				<button type='submit' class='btn btn-default createitemsubmit'>Daten anlegen/ändern</button>
+                    	    </form>
                 	</div>
             	    </div>
         	</div>

@@ -38,5 +38,6 @@ $(".createitem-formular").submit(function(event)
 	{
 	    $(this).bootstrapTable('refresh');
 	});
+	$(modal).find('.createitem-formular')[0].reset();
     });
 });

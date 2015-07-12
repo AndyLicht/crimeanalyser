@@ -2,7 +2,7 @@
     $databasesettings = parse_ini_file('databaseconnection.ini');
     $conn_string = 'host='.$databasesettings['host'].' port='.$databasesettings['port'].' dbname='.$databasesettings['database'].' user='.$databasesettings['user'].' password='.$databasesettings['password'];
     $dbconn = pg_connect($conn_string);
-    var_dump($_POST);
+//    var_dump($_POST);
     if($_POST['modal'] == 'modal-projects')
     {
 	$machinename =  strtolower($_POST['projectname']);
@@ -35,6 +35,8 @@
     };
     if($_POST['modal'] == 'modal-data')
     {
+	$query = "INSERT INTO ".$_POST['project']." VALUES (to_timestamp('".$_POST['datatime']."','YYYY-MM-DD HH24:MI:SS'),'".$_POST['dataobject']."','".$_POST['datalocation']."',ST_GeometryFromText( 'POINT ( ".$_POST['dataxcoor']." ".$_POST['dataycoor'].")', 4326),'".$_POST['datadescription']."');";
+	pg_query($query);
 	echo '<br><div class="alert alert-success" role="alert">Daten erfolgreich angelegt</div>';
     };
     if($_POST['modal'] == 'modal-styles')

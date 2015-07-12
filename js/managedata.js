@@ -41,25 +41,3 @@ $('#savechangedata').on('click',function()
 	$('#data-statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
     });
 });
-
-
-$('#savenewdata').on('click',function()
-{
-    var base_url = window.location.origin;
-    $.ajax({
-	type:'POST',
-	url: base_url+'/php/data/createdata.php',
-	data: {project:$('#currentproject').text(),oid:$('#newdataoid').val(),time:$('#newdatatime').val(),object:$('#newdataobject').val(),description:$('#newdatadescription').val(),location:$('#newdatalocation').val(),xcoor:$('#newdataxcoor').val(),ycoor:$('#newdataycoor').val()},
-    })
-    .done(function(response)
-    {
-	console.log(response);
-	$('#data-statusmeldung').html(response);
-	$('#datatable').bootstrapTable('refresh');
-	$('#dataaddform').hide();
-    })
-    .fail(function()
-    {
-	$('#data-statusmeldung').html('keine Verbindung zum Connector oder andere Systemfehler');
-    });	
-});
