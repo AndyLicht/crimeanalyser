@@ -29,7 +29,7 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
 			    <th data-field='fillcolor'>Füllfarbe</th>
 			    <th data-field='strokecolor'>Rahmenfarbe</th>
 			    <th data-field='strokewidth'>Rahmenstärke</th>
-			    <th data-field='action' data-formatter='actionFormatterStyles'>Action</th>
+			    <th data-field='action' data-formatter='actionFormatterStyle'>Action</th>
 			</tr>
 		    </thead>
 		</table>
@@ -38,38 +38,41 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
 		    <thead>
 			<tr>
 			    <th data-field='object'>Objekt</th>
-			    <th data-field='action' data-formatter='actionFormatterStylesDefault'>Action</th>
+			    <th data-field='action' data-formatter='actionFormatterDefaultStyle'>Action</th>
 			</tr>
 		    </thead>
 		</table>
 		<br>
 		<br>
-		<div id='stylechangeform'>
-			    <input type='text' id='stylestatus' class='form-control' disabled>
-			    <input type='text' class='form-control' id='changestyleobject' placeholder='Objekt' disabled>
-                            <br>
-                            <input type='number' class='form-control' id='changestyleradius' min='1' max='20' step='1'>
-                            <br>
-			    <div class='input-group colorpicker-component demo demo-auto colorpicker-element'>
-                        	<input id='changestylefillcolor' type='text' value='' class='form-control'>
-                                <span class='input-group-addon'>
-				    <i style='background-color: rgb(155, 25, 235);'>
-				    </i>
-				</span>
-                            </div>
+		<div class='row'>
+		    <div class='col-md-6'>
+			<form class='createitem-formular'action='php/create.php' title='' method='post'>
+			    <input type='text' id='stylestatus' class='form-control myforminput' disabled>
+			    <input type='text' id='styleoid' class='form-control myforminput' disabled>
 			    <br>
-			    <div class='input-group colorpicker-component demo demo-auto colorpicker-element'>
-                    		<input id='changestylestrokecolor' type='text' value='' class='form-control'>
-                                <span class='input-group-addon'>
-				    <i style='background-color: rgb(155, 25, 235);'>
-				    </i>
-				    </span>
-                            </div>
-                            <br>
-			    <input type='number'class='form-control' id='changestylestrokewidth'  min='0' max='10' step='1'>
-                            <br>
-                            <button id='savechangestyles' type='button' class='btn btn-default'>ändern</button>
-                        </div>
+			    <input type='text' class='form-control myforminput' id='styleobject' placeholder='Objekt' disabled>
+                	    <br>
+                	    <input type='number' class='form-control myforminput' id='styleradius' min='1' max='20' step='1' value='8'>
+                	    <br>
+			    <div id='fillpicker' class='input-group mycolorpicker'>
+				<input id='fillcolorpicker' type='text' value='rgba(43,147,242,1)' class='form-control myforminput' />
+				<span class='input-group-addon'><i></i></span>
+			    </div>
+			    <br>
+			    <div id='strokepicker' class='input-group mycolorpicker'>
+				<input id='strokecolorpicker' type='text' value='rgba(28,9,245,1)' class='form-control myforminput' />
+				<span class='input-group-addon'><i></i></span>
+			    </div>
+			    <br>
+			    <input type='number'class='form-control myforminput' id='stylestrokewidth'  min='0' max='10' step='1' value='1'>
+                	    <br>
+			    <button type='submit' class='btn btn-default createitemsubmit'>Styles definieren</button>
+			</form>
+		    </div>
+		    <div class='col-md-6'>
+			<h4>Vorschau</h4>
+		    </div>
+		</div>
 	    </div>
 	</div>
     </div>

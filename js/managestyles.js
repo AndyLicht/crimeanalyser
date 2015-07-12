@@ -1,4 +1,4 @@
-$('body').on('click','.editStylesDefault',function()
+/*$('body').on('click','.editStylesDefault',function()
 {
     row = $(this).closest('tr');
     clearChangeForm();
@@ -17,6 +17,7 @@ $('body').on('click','.editStyles',function()
     $('#changestylestrokewidth').val(row.children().eq(6).text());
     $('#stylechangeform').show();
 });
+*/
 
 function clearChangeForm()
 {

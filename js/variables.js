@@ -12,11 +12,11 @@ var defaultStyle = [new ol.style.Style(
 	radius: 8,
 	fill: new ol.style.Fill(
 	{
-    	    color: 'rgba(12,185,240,1)',
+    	    color: 'rgba(43,147,242,1)',
 	}),
 	stroke: new ol.style.Stroke(
 	{
-	    color: 'blue',
+	    color: 'rgba(28,9,245,1)',
 	    width: 1
 	})
     })

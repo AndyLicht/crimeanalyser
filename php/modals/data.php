@@ -61,7 +61,7 @@ $modal_data = "<div id='modal-data' class='modal fade'>
 					<th data-field='description'>Beschreibung</th>
 					<th data-field='geom'>Geometry</th>
 					<th data-field='location'>Location</th>
-					<th data-field='action' data-formatter='actionFormatterData'>Action</th>
+					<th data-field='action' data-formatter='actionFormatterItem'>Action</th>
                             	    </tr>
                         	</thead>
                     	    </table>

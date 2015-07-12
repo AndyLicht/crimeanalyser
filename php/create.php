@@ -2,7 +2,6 @@
     $databasesettings = parse_ini_file('databaseconnection.ini');
     $conn_string = 'host='.$databasesettings['host'].' port='.$databasesettings['port'].' dbname='.$databasesettings['database'].' user='.$databasesettings['user'].' password='.$databasesettings['password'];
     $dbconn = pg_connect($conn_string);
-//    var_dump($_POST);
     if($_POST['modal'] == 'modal-projects')
     {
 	$machinename =  strtolower($_POST['projectname']);
@@ -41,7 +40,18 @@
     };
     if($_POST['modal'] == 'modal-styles')
     {
-	echo '<br><div class="alert alert-success" role="alert">Styles angelegt</div>';
+	if($_POST['stylestatus']=='new')
+	{
+	    $query = "INSERT INTO styles values('".$_POST['styleobject']."',".$_POST['projectid'].",".$_POST['styleradius'].",'".$_POST['fillcolorpicker']."',".$_POST['stylestrokewidth'].",'".$_POST['strokecolorpicker']."');";
+	    pg_query($query);
+	    echo '<br><div class="alert alert-success" role="alert">Style angelegt</div>';
+	}
+	else
+	{
+	    $query = "UPDATE styles set object='".$_POST['styleobject']."',projectoid=".$_POST['projectid'].",radius=".$_POST['styleradius'].",fillcolor='".$_POST['fillcolorpicker']."',strokewidth=".$_POST['stylestrokewidth'].",strokecolor='".$_POST['strokecolorpicker']."' where oid=".$_POST['styleoid'].";";
+	    pg_query($query);
+	    echo '<br><div class="alert alert-success" role="alert">Style geändert</div>';
+	};
     };
     pg_close($dbconn);
 ?>

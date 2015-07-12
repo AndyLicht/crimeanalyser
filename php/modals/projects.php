@@ -27,7 +27,7 @@ $modal_projects ="<div id='modal-projects' class='modal fade'>
 			    <th data-field='id'>ID</th>
 			    <th data-field='name'>Name</th>
 			    <th data-field='description'>Beschreibung</th>
-			    <th data-field='action' data-formatter='actionFormatterProject'>Action</th>
+			    <th data-field='action' data-formatter='actionFormatterItem'>Action</th>
 			</tr>
 		    </thead>
 		</table>
