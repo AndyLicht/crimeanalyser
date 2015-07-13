@@ -1,10 +1,14 @@
 var ol3map;
 var vectorlayer;
+var featureoverlay;
+var featureinfooverlay;
 var vectorsource;
 var timefilterdata = null;
 var timefilternumber = null;
 var base_url = window.location.origin;
 var newstyleinformation;
+var highlightedfeature = null;
+var selectedfeature = null;
 var defaultStyle = [new ol.style.Style(
 {
     image:new ol.style.Circle(
@@ -21,6 +25,42 @@ var defaultStyle = [new ol.style.Style(
 	})
     })
 })];
+
+var overlayStyle = [new ol.style.Style(
+{
+    image:new ol.style.Circle(
+    {
+	radius: 15,
+	fill: new ol.style.Fill(
+	{
+	    color: 'orange',
+	}),
+	stroke: new ol.style.Stroke(
+	{
+	    color: 'blue',
+	    width: 5
+	})
+    })
+})];
+
+var selectedStyle = [new ol.style.Style(
+{
+    image:new ol.style.Circle(
+    {
+	radius: 15,
+	fill: new ol.style.Fill(
+	{
+	    color: 'red',
+	}),
+	stroke: new ol.style.Stroke(
+	{
+	    color: 'green',
+	    width: 5
+	})
+    })
+})];
+
+
 
 
 

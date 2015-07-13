@@ -133,6 +133,7 @@
 	<script src="js/vectorlayer.js"></script>
 	<script src="js/rasterlayer.js"></script>
 	<script src="js/map.js"></script>
+	<script src="js/mapfunctions.js"></script>
 	<script src="js/layerswitcher.js"></script>
 	<script src="js/edititems.js"></script>
 	<script src="js/manageprojects.js"></script>

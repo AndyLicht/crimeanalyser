@@ -18,3 +18,37 @@ var scaleline = new ol.control.ScaleLine({
     target: document.getElementById('scaleline')
   });
 
+
+
+var highlight;
+var displayFeatureInfo = function(pixel)
+{
+    var feature = ol3map.forEachFeatureAtPixel(pixel, function(feature, layer)
+    {
+	return feature;
+    });
+
+    //var info = document.getElementById('info');
+    if (feature)
+    {
+	console.log(feature.getId() + ': ' + feature.get('object'));
+    }
+    else
+    {
+    }
+
+    if (feature !== highlight)
+    {
+	if (highlight)
+	{
+	    featureOverlay.getSource().removeFeature(highlight);
+	}
+	if (feature)
+	{
+	    featureOverlay.getSource().addFeature(feature);
+    }
+	highlight = feature;
+    }
+};
+
+

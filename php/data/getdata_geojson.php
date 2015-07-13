@@ -33,11 +33,11 @@
 	    $i++;
 	    if($i < $results_count)
 	    {
-		$geojson = $geojson."{\"type\": \"Feature\",\"properties\":{\"id\":\"".$row[0]."\",\"time\":\"".$row[2]."\",\"week\":\"".$row[3]."\",\"object\":\"".$row[1]."\"},\"geometry\": {\"type\": \"Point\",\"coordinates\": [".$row[4].",".$row[5]."]}},";
+		$geojson = $geojson."{\"id\":".$row[0].",\"type\": \"Feature\",\"properties\":{\"time\":\"".$row[2]."\",\"week\":\"".$row[3]."\",\"object\":\"".$row[1]."\"},\"geometry\": {\"type\": \"Point\",\"coordinates\": [".$row[4].",".$row[5]."]}},";
 	    }
 	    else
 	    {
-		$geojson = $geojson."{\"type\": \"Feature\",\"properties\":{\"id\":\"".$row[0]."\",\"time\":\"".$row[2]."\",\"week\":\"".$row[3]."\",\"object\":\"".$row[1]."\"},\"geometry\": {\"type\": \"Point\",\"coordinates\": [".$row[4].",".$row[5]."]}}]}";
+		$geojson = $geojson."{\"id\":".$row[0].",\"type\": \"Feature\",\"properties\":{\"time\":\"".$row[2]."\",\"week\":\"".$row[3]."\",\"object\":\"".$row[1]."\"},\"geometry\": {\"type\": \"Point\",\"coordinates\": [".$row[4].",".$row[5]."]}}]}";
 	    }
 	}
     }
