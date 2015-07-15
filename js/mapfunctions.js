@@ -14,7 +14,7 @@ ol3map.on('click', function(evt)
     displayFeatureInfo(evt.pixel);
 });
 
-
+//Funktion die greift, wenn der Cursor über einem Feature ist
 var displayOverFeature = function(pixel)
 {
     var feature = ol3map.forEachFeatureAtPixel(pixel, function(feature, layer)
@@ -48,13 +48,15 @@ var displayOverFeature = function(pixel)
     }
 };
 
-
+//Funktion die ein Feature selektiert und dessen Werte im Info-Bereich ausgibt
 var displayFeatureInfo = function(pixel)
 {
     var feature = ol3map.forEachFeatureAtPixel(pixel, function(feature, layer)
     {
 	return feature;
     });
+
+    //muss noch ausgebaut werden, dass auch wirklich jedes Feature aufgezeigt wird
     if(feature)
     {
 	if ((selectedfeature == null) || (feature.getId() != selectedfeature.getId()))
@@ -64,6 +66,8 @@ var displayFeatureInfo = function(pixel)
 		featureinfooverlay.getSource().removeFeature(selectedfeature);
 		selectedfeature = null;
 	    }
+
+	    /*
 	    var selectstyle = null;
 	    $(newstyleinformation).each(function()
 	    {
@@ -71,7 +75,22 @@ var displayFeatureInfo = function(pixel)
 		{
 		    selectstyle = buildselectStyle(this.radius,this.strokewidth);
 		}
+	    });*/
+	    var infopanel = '';
+	    $(feature.getKeys()).each(function()
+	    {
+		if(this != 'geometry')
+		{
+		    console.log(feature.get(this));
+		    infopanel=infopanel+'<p>'+this+': '+feature.get(this)+'<p>';
+		}
+		else
+		{
+		    console.log('geometrie: '+feature.get($(this)));
+		}
 	    });
+	    $('#infopanel').html(infopanel);
+	    console.log(infopanel);
 	    selectedfeature = feature;
 	    //selectedfeature.setStyle(selectstyle);
 	    featureinfooverlay.getSource().addFeature(selectedfeature);
@@ -83,6 +102,7 @@ var displayFeatureInfo = function(pixel)
 	{
 	    featureinfooverlay.getSource().removeFeature(selectedfeature);
 	    selectedfeature = null;
+	    $('#infopanel').html('');
 	}
     }
 };

@@ -81,13 +81,15 @@
     	    </div>
 	</nav>
 <!-- Body für die Karte und für das Informationspanel -->
-	<div class="row">
+	<div id="maincontent" class="row">
 	    <div class="col-md-10 map" id='ol3map'></div>
 	    <div class="col-md-2">
 		<div class="sidebar-module sidebar-module-inset">
 		    <div>
 		        <h4>Legende</h4>
 		        <div id="legende"></div>
+			<h4>Info</h4>
+			<div id="infopanel"></div>
 		    </div>
 		</div>
 	    </div>
