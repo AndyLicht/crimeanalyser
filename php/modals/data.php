@@ -75,10 +75,16 @@ $modal_data = "<div id='modal-data' class='modal fade'>
                         	<br>
 				<input class='form-control myforminput' id='datalocation' placeholder='Location'>
                         	<br>
-				<input class='form-control myforminput' id='dataxcoor' placeholder='X-Koordinate'>
-                        	<br>
-				<input class='form-control myforminput' id='dataycoor' placeholder='Y-Koordinate'>
-                        	<br>
+				<div class='row'>
+				    <div class='col-md-6'id='ol3map_small'></div>
+				    <div class='col-md-6'>
+					<input class='form-control myforminput' id='dataxcoor' placeholder='X-Koordinate' disabled>
+                        		<br>
+					<input class='form-control myforminput' id='dataycoor' placeholder='Y-Koordinate' disabled>
+                        		<br>
+				    </div>
+				    <br>
+				</div>
 				<button type='submit' class='btn btn-default createitemsubmit'>Daten anlegen/ändern</button>
                     	    </form>
                 	</div>

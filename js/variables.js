@@ -1,4 +1,5 @@
 var ol3map;
+var ol3map_small;
 var vectorlayer;
 var featureoverlay;
 var featureinfooverlay;

@@ -1,7 +1,6 @@
-.map {
-        height: 800px;
-      }
-	  
+#ol3map_small {
+    height:300px;
+}
 .navbar
 {
 	border: 0 !important;
