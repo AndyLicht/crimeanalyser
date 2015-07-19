@@ -16,7 +16,6 @@ ol3map_small = new ol.Map(
     target: 'ol3map_small',
     view: view_small,
 });
-//ol3map_small.updateSize();
 
 $('#modal-data').on('shown.bs.modal', function (e) {
     ol3map_small.updateSize();
@@ -24,7 +23,7 @@ $('#modal-data').on('shown.bs.modal', function (e) {
 
 ol3map_small.on('click', function(evt)
 {
-    var coor = ol3map_small.getEventCoordinate(evt);
+    var coor = evt.coordinate;
     $('#dataxcoor').val(coor[0]);
     $('#dataycoor').val(coor[1]);
 });

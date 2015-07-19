@@ -4,7 +4,7 @@ $("form#uploadForm").submit(function()
     var formData = new FormData($(this)[0]);
     formData.append('project',$('#currentproject').attr('machinename'));
     $.ajax({
-        url: base_url+'/projekte/crimeanalyser/php/data/importexcel.php',
+        url: base_url+'/php/data/importexcel.php',
         type: 'POST',
         data: formData,
         async: false,

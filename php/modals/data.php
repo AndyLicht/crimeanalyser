@@ -26,11 +26,11 @@ $modal_data = "<div id='modal-data' class='modal fade'>
 						<form id='uploadForm' class='navbar-form' method='post' enctype='multipart/form-data'>
 						    <div class='input-group'>
     							<span class='input-group-btn'>
-							    <span class='btn btn-default btn-file'><span class='glyphicon glyphicon-folder-open'></span><input name='filetoupload' class='form-control' id='filetoupload' type='file' accept='.txt'></span>
-    							</span>
+							    <span class='btn btn-default btn-file'><span class='glyphicon glyphicon-folder-open'></span><input name='filetoupload' class='form-control' id='filetoupload' type='file' accept='.txt,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'></span>
+							</span>
     							<input type='text'id='filetoimport' name='filetoimport' class='form-control'>
 							<span class='input-group-btn'>
-						    	    <span id='startimport' class='btn btn-default'>Import</span>
+							    <button type='submit' class='btn btn-default' id='upload_file'>Upload</button>
 							</span>
 						    </div>
 						    <div class='btn-group'>
