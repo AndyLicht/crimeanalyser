@@ -4,13 +4,13 @@ $databasesettings = parse_ini_file('../databaseconnection.ini');
 $conn_string = 'host='.$databasesettings['host'].' port='.$databasesettings['port'].' dbname='.$databasesettings['database'].' user='.$databasesettings['user'].' password='.$databasesettings['password'];
 $dbconn = pg_connect($conn_string);
 
-/*
+
 if($_POST['option']=='2')
 {
     $status =  'ersetzen';
     $query = 'Delete from '.$_POST['project'].';';
     pg_query($query);
-}*/
+}
 
 error_reporting(E_ALL);
 ini_set('display_errors', TRUE);
@@ -23,7 +23,6 @@ date_default_timezone_set('Europe/Berlin');
 require_once dirname(__FILE__) . '/../Excelphp/Classes/PHPExcel/IOFactory.php';
 $callStartTime = microtime(true);
 
-//$objPHPExcel = PHPExcel_IOFactory::load('/../Excelphp/Examples/template.xlsx');
 $path = $_FILES['filetoupload']['tmp_name'];
 $objPHPExcel = PHPExcel_IOFactory::load($path);
 $sheet = $objPHPExcel->getSheet(0);
@@ -76,7 +75,10 @@ for ($row = 1; $row <= $highestRow; $row++)
 	    }
 	    if($check == TRUE)
 	    {
-		$query = "INSERT INTO ".$_POST['project']. "  VALUES (to_timestamp('".$key[$index['time']]."','YYYY-MM-DD HH24:MI:SS'),'".$key[$index['objekt']]."','".$key[$index['location']]."',ST_GeometryFromText( 'POINT ( ".$key[$index['xcoor']]." ".$key[$index['ycoor']].")', 4326),'".$key[$index['pdescription']]."');";
+		$format = 'Y-m-d';
+		$date = date($format,PHPExcel_Shared_Date::ExcelToPHP($key[$index['datum']])).' '.PHPExcel_Style_NumberFormat::toFormattedString($key[$index['uhrzeit']], 'hh:mm:ss');
+		echo $date;
+		$query = "INSERT INTO ".$_POST['project']. "  VALUES (to_timestamp('".$date."','YYYY-MM-DD HH24:MI:SS'),'".$key[$index['objekt']]."','".$key[$index['location']]."',ST_GeometryFromText( 'POINT ( ".$key[$index['xcoor']]." ".$key[$index['ycoor']].")', 4326),'".$key[$index['pdescription']]."');";
 		pg_query($query);
 	    }
 	    else

@@ -2,6 +2,7 @@ $("form#uploadForm").submit(function()
 {
     var base_url = window.location.origin;
     var formData = new FormData($(this)[0]);
+    console.log(formData);
     formData.append('project',$('#currentproject').attr('machinename'));
     $.ajax({
         url: base_url+'/php/data/importexcel.php',
