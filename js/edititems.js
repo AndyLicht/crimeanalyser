@@ -1,6 +1,6 @@
-function actionFormatterItem(value, row, index) {
+function actionFormatterData(value, row, index) {
     return [
-        '<a class="edit ml10 editItem" title="Ändern">',
+        '<a class="edit ml10 editData" title="Ändern">',
         '<i class="glyphicon glyphicon-edit"></i>',
         '</a>',
     ].join('');

@@ -20,11 +20,6 @@ $("form#uploadForm").submit(function()
     return false;
 });
 
-
-
-
-
-
 $(document).on('change', '.btn-file :file', function()
 {
     var input = $(this),

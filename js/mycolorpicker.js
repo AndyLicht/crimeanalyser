@@ -6,8 +6,8 @@ $(function(){
 $(function(){
         $('.mycolorpicker').colorpicker({format:'rgba'});
     });
-$('#colorinfos').on('click',function()
-{
-    console.log('jo');
-    console.log($('#strokecolorpicker').colorpicker('getValue'));
-});
+
+
+
+
+

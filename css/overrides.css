@@ -3,17 +3,18 @@
     padding-top:50px;
     padding-bottom:50px;
 };
+form
+{
+    display:none;
+}
 
-
-
-
-#datachangeform, #changedataoid, #dataaddform, #projectform, #stylechangeform,#stylestatus, .createitem-formular
+#stylestatus,#styleoid
 {
     display:none;
 }
 
 
-.btn-file 
+.btn-file
 {
     position: relative;
     overflow: hidden;

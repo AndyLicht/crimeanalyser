@@ -7,7 +7,7 @@
 
     if(isset($_GET['project']))
     {
-	$query = "SELECT oid,time,object,pdescription,ST_astext(the_geom),location from ".$_GET['project'];
+	$query = "SELECT oid,time,object,pdescription,ST_X(the_geom)  as xcoor , ST_y(the_geom)  as ycoor,location from ".$_GET['project'];
 	$results = pg_query($query);
 	$rows = pg_num_rows($results);
 	$i = 0;
@@ -16,11 +16,11 @@
 	    $i++;
 	    if ($rows == $i)
 	    {
-		$json = $json.'{ "id":'.$row[0].', "time": "'.$row[1].'", "objekt": "'.$row[2].'","description": "'.$row[3].'","geom":"'.$row[4].'","location":"'.$row[5].'"}';
+		$json = $json.'{ "id":'.$row[0].', "time": "'.$row[1].'", "objekt": "'.$row[2].'","description": "'.$row[3].'","xcoor":"'.$row[4].'","ycoor":"'.$row[5].'","location":"'.$row[6].'"}';
 	    }
 	    else
 	    {
-		$json = $json.'{ "id":'.$row[0].', "time": "'.$row[1].'", "objekt": "'.$row[2].'","description": "'.$row[3].'","geom":"'.$row[4].'","location":"'.$row[5].'"},';
+		$json = $json.'{ "id":'.$row[0].', "time": "'.$row[1].'", "objekt": "'.$row[2].'","description": "'.$row[3].'","xcoor":"'.$row[4].'","ycoor":"'.$row[5].'","location":"'.$row[6].'"},';
 	    }
 	}
     }

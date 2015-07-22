@@ -18,6 +18,7 @@
 	<link href="js/libraries/bootstrap-table/src/bootstrap-table.css" rel="stylesheet">
 	<link href="js/libraries/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
 	<link href="js/libraries/bootstrap_dropdowns_enhancement/dist/css/dropdowns-enhancement.css" rel="stylesheet">
+	<link href="js/libraries/bootstrap-datepicker/css/bootstrap-datepicker3.css" rel="stylesheet">
 	<link rel="stylesheet" href="js/libraries/ol3/css/ol.css" type="text/css">
 	<link href="css/overrides.css" rel="stylesheet">
 	<link href="css/map_overrides.css" rel="stylesheet">
@@ -129,6 +130,8 @@
 	<script src="js/libraries/bootstrap-table/src/bootstrap-table.js"></script>
 	<script src="js/libraries/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
 	<script src="js/libraries/bootstrap_dropdowns_enhancement/dist/js/dropdowns-enhancement.js"></script>
+	<script src="js/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="js/libraries/bootstrap-datepicker/locales/bootstrap-datepicker.de.min.js" charset="UTF-8"></script>
 	<script src="js/libraries/ol3/build/ol.js" type="text/javascript"></script>
 	<script src="js/variables.js"></script>
 	<script src="js/mapcontrols.js"></script>
@@ -147,5 +150,6 @@
 	<script src="js/timefunction.js"></script>
 	<script src="js/deleteentry.js"></script>
 	<script src="js/createentry.js"></script>
+	<script src="js/datepicker.js"></script>
     </body>
 </html>

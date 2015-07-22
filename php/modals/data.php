@@ -59,15 +59,32 @@ $modal_data = "<div id='modal-data' class='modal fade'>
                                         <th data-field='time'>Zeit</th>
                             		<th data-field='objekt'>Objekt</th>
 					<th data-field='description'>Beschreibung</th>
-					<th data-field='geom'>Geometry</th>
+					<th data-field='xcoor'>X-Koor.</th>
+					<th data-field='ycoor'>Y-Koor.</th>
 					<th data-field='location'>Location</th>
-					<th data-field='action' data-formatter='actionFormatterItem'>Action</th>
+					<th data-field='action' data-formatter='actionFormatterData'>Action</th>
                             	    </tr>
                         	</thead>
                     	    </table>
                     	    <br>
-			    <form class='createitem-formular'action='php/create.php' title='' method='post'>
-                        	<input type='text' class='form-control myforminput' id='datatime' placeholder='Zeit'>
+			    <form class='createitem-formular' action='php/create.php' title='' method='post'>
+				<div class='row'>
+				    <div class='col-md-6'>
+					<div class='input-group date' id='datadatepicker'>
+					    <input id='date' type='text' class='form-control myforminput' placeholder='Datum'><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
+					</div>
+				    </div>
+				    <div class='col-md-6'>
+					<div class='well'>
+					    <div id='datatimepicker' class='input-append'>
+						<input data-format='hh:mm:ss' id='time' type='text'></input>
+						<span class='add-on'>
+						    <i data-time-icon='icon-time' data-date-icon='icon-calendar'></i>
+						</span>
+					    </div>
+					</div>
+				    </div>
+				</div>
                         	<br>
 				<input type='text' class='form-control myforminput' id='dataobject' placeholder='Objekt'>
                         	<br>

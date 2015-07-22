@@ -23,8 +23,8 @@ $('#modal-data').on('shown.bs.modal', function (e) {
 
 ol3map_small.on('click', function(evt)
 {
-    var coor = evt.coordinate;
-    $('#dataxcoor').val(coor[0]);
-    $('#dataycoor').val(coor[1]);
+    var coor4326 = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');
+    $('#dataxcoor').val(coor4326[0]);
+    $('#dataycoor').val(coor4326[1]);
 });
 

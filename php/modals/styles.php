@@ -46,7 +46,7 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
 		<br>
 		<div class='row'>
 		    <div class='col-md-6'>
-			<form class='createitem-formular'action='php/create.php' title='' method='post'>
+			<form class='createitem-formular' id='createstyleform' action='php/create.php' method='post'>
 			    <input type='text' id='stylestatus' class='form-control myforminput' disabled>
 			    <input type='text' id='styleoid' class='form-control myforminput' disabled>
 			    <br>
@@ -70,7 +70,7 @@ $modal_styles = "<div id='modal-styles' class='modal fade'>
 			</form>
 		    </div>
 		    <div class='col-md-6'>
-			<h4>Vorschau</h4>
+			<h4></h4>
 		    </div>
 		</div>
 	    </div>
