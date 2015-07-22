@@ -70,19 +70,24 @@ $modal_data = "<div id='modal-data' class='modal fade'>
 			    <form class='createitem-formular' action='php/create.php' title='' method='post'>
 				<div class='row'>
 				    <div class='col-md-6'>
-					<div class='input-group date' id='datadatepicker'>
-					    <input id='date' type='text' class='form-control myforminput' placeholder='Datum'><span class='input-group-addon'><i class='glyphicon glyphicon-th'></i></span>
-					</div>
+					<div class='form-group'>
+					    <div class='input-group date' id='datadatepicker'>
+						<input type='text'id='date' class='form-control myforminput' />
+                				<span class='input-group-addon'>
+                    				    <span class='glyphicon glyphicon-calendar'></span>
+						</span>
+            				    </div>
+        				</div>
 				    </div>
 				    <div class='col-md-6'>
-					<div class='well'>
-					    <div id='datatimepicker' class='input-append'>
-						<input data-format='hh:mm:ss' id='time' type='text'></input>
-						<span class='add-on'>
-						    <i data-time-icon='icon-time' data-date-icon='icon-calendar'></i>
-						</span>
-					    </div>
-					</div>
+					<div class='form-group'>
+            				    <div class='input-group date' id='datatimepicker'>
+                				<input type='text' id='time' class='form-control' />
+                				<span class='input-group-addon'>
+                    				    <span class='glyphicon glyphicon-time'></span>
+				                </span>
+            				    </div>
+        				</div>
 				    </div>
 				</div>
                         	<br>

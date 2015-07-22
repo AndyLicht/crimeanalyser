@@ -1,15 +1,12 @@
-$('#datadatepicker').datepicker(
+$('#datadatepicker').datetimepicker(
 {
-    format: "yyyy/mm/dd",
-    autoclose: true,
-    language: "de",
+    format: "YYYY/MM/DD",
+    locale: "de",
     calendarWeeks: true,
-    todayHighlight: true
 });
 
 
-
-$('#datatimepicker').datetimepicker(
-{
-      pickDate: false
-});
+$('#datatimepicker').datetimepicker({
+                    format: 'LTS',
+		    locale: 'de'
+                });
