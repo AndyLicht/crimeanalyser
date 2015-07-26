@@ -8,7 +8,6 @@
 	{
 	    $id = $row['id'];
 	    $query = 'Select machinename from crimeanalyser where oid = '.$id.';';
-	    echo $query;
 	    $result = pg_query($query);
 	    while ($row = pg_fetch_row($result)) 
 	    {
@@ -16,7 +15,8 @@
 		pg_query($query);
 	    };
 	    $query = 'Delete from crimeanalyser where oid ='.$id.';';
-	    echo $query;
+	    pg_query($query);
+	    $query = 'Delete from styles where projectoid ='.$id.';';
 	    pg_query($query);
 	}
 	echo '<br><div class="alert alert-success" role="alert">Projekt(e) erfolgreich gelöscht</div>';
