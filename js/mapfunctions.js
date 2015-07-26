@@ -34,7 +34,6 @@ var displayOverFeature = function(pixel)
 		}
 	    });
 	    highlightedfeature = feature;
-	    //highlightedfeature.setStyle(selectstyle);
 	    featureoverlay.getSource().addFeature(highlightedfeature);
 	}
     }
@@ -53,6 +52,7 @@ var displayFeatureInfo = function(pixel)
 {
     var feature = ol3map.forEachFeatureAtPixel(pixel, function(feature, layer)
     {
+    console.log(feature);
 	return feature;
     });
 
@@ -63,37 +63,21 @@ var displayFeatureInfo = function(pixel)
 	{
 	    if(selectedfeature)
 	    {
-		featureinfooverlay.getSource().removeFeature(selectedfeature);
+		selectedSource.removeFeature(selectedfeature);
 		selectedfeature = null;
 	    }
 
-	    /*
-	    var selectstyle = null;
-	    $(newstyleinformation).each(function()
-	    {
-		if(feature.get('object') == this.object)
-		{
-		    selectstyle = buildselectStyle(this.radius,this.strokewidth);
-		}
-	    });*/
 	    var infopanel = '';
 	    $(feature.getKeys()).each(function()
 	    {
 		if(this != 'geometry')
 		{
-		    console.log(feature.get(this));
 		    infopanel=infopanel+'<p>'+this+': '+feature.get(this)+'<p>';
-		}
-		else
-		{
-		    console.log('geometrie: '+feature.get($(this)));
 		}
 	    });
 	    $('#infopanel').html(infopanel);
-	    console.log(infopanel);
 	    selectedfeature = feature;
-	    //selectedfeature.setStyle(selectstyle);
-	    featureinfooverlay.getSource().addFeature(selectedfeature);
+	    selectedSource.addFeature(selectedfeature);
 	}
     }
     else

@@ -19,14 +19,14 @@ vectorlayer = new ol.layer.Vector(
 featureoverlay = new ol.layer.Vector(
 {
     title: 'FeatureOverlay',
-    source: new ol.source.Vector(),
+    source: hoverSource,
     projection:'EPSG:3857',
     style:overlayStyle,
 });
 featureinfooverlay = new ol.layer.Vector(
 {
     title: 'FeatureSelected',
-    source: new ol.source.Vector(),
+    source: selectedSource,
     projection:'EPSG:3857',
     style:selectedStyle,
 });

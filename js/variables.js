@@ -8,6 +8,8 @@ var timefilterdata = null;
 var timefilternumber = null;
 var base_url = window.location.origin;
 var newstyleinformation;
+var hoverSource = new ol.source.Vector();
+var selectedSource = new ol.source.Vector();
 var highlightedfeature = null;
 var selectedfeature = null;
 var defaultStyle = [new ol.style.Style(

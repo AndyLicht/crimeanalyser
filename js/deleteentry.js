@@ -46,6 +46,15 @@ $('body').on('click','#deletedatas',function()
 	{
 	    refreshVectorSource($('#currentproject').attr('machinename'),$('#currentproject').attr('projectid'));
 	}
+	$('#infopanel').html(infopanel);
+	hoverSource.clear();
+	highlightedfeature = null;
+	if(selectedfeature)
+	{
+	    selectedSource.removeFeature(selectedfeature);
+	    selectedfeature = null;
+	}
+
     })
     .fail(function()
     {

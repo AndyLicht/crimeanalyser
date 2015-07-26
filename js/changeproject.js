@@ -7,9 +7,15 @@ $('body').on('click','.projectchangelink',function()
     $('#datatable').bootstrapTable('refresh',{url: 'php/data/getdata_json.php?project='+$('#currentproject').text()});
     $('#stylestable_default').bootstrapTable('refresh',{url: 'php/style/getstyle_json.php?projectid='+$(this).attr('projectid')+'&default=true&project='+$('#currentproject').text()});
     $('#stylestable').bootstrapTable('refresh',{url: 'php/style/getstyle_json.php?projectid='+$(this).attr('projectid')});
-
-
     refreshVectorSource($(this).attr('machinename'),$(this).attr('projectid'));
+    $('#infopanel').html(infopanel);
+    hoverSource.clear();
+    highlightedfeature = null;
+    if(selectedfeature)
+    {
+	selectedSource.removeFeature(selectedfeature);
+	selectedfeature = null;
+    }
 });
 function refreshVectorSource(var_machinename,var_projectid)
 {
