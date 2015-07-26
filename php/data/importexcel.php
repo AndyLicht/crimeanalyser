@@ -78,7 +78,7 @@ for ($row = 1; $row <= $highestRow; $row++)
 		$format = 'Y-m-d';
 		$date = date($format,PHPExcel_Shared_Date::ExcelToPHP($key[$index['datum']])).' '.PHPExcel_Style_NumberFormat::toFormattedString($key[$index['uhrzeit']], 'hh:mm:ss');
 		echo $date;
-		$query = "INSERT INTO ".$_POST['project']. "  VALUES (to_timestamp('".$date."','YYYY-MM-DD HH24:MI:SS'),'".$key[$index['objekt']]."','".$key[$index['location']]."',ST_GeometryFromText( 'POINT ( ".$key[$index['xcoor']]." ".$key[$index['ycoor']].")', 4326),'".$key[$index['pdescription']]."');";
+		$query = "INSERT INTO ".$_POST['project']. "  VALUES (to_timestamp('".$date."','YYYY-MM-DD HH24:MI:SS'),'".$key[$index['objekt']]."','".$key[$index['location']]."',ST_GeometryFromText( 'POINT ( ".str_replace(',','.',$key[$index['xcoor']])." ".str_replace(",",".",$key[$index['ycoor']]).")', 4326),'".$key[$index['pdescription']]."');";
 		pg_query($query);
 	    }
 	    else

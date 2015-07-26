@@ -62,7 +62,7 @@ $modal_data = "<div id='modal-data' class='modal fade'>
 					<th data-field='xcoor'>X-Koor.</th>
 					<th data-field='ycoor'>Y-Koor.</th>
 					<th data-field='location'>Location</th>
-					<th data-field='action' data-formatter='actionFormatterData'>Action</th>
+					<th data-field='action' data-formatter='actionFormatterData'></th>
                             	    </tr>
                         	</thead>
                     	    </table>
@@ -82,7 +82,7 @@ $modal_data = "<div id='modal-data' class='modal fade'>
 				    <div class='col-md-6'>
 					<div class='form-group'>
             				    <div class='input-group date' id='datatimepicker'>
-                				<input type='text' id='time' class='form-control' />
+                				<input type='text' id='time' class='form-control myforminput' />
                 				<span class='input-group-addon'>
                     				    <span class='glyphicon glyphicon-time'></span>
 				                </span>

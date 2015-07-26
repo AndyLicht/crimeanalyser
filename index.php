@@ -20,8 +20,8 @@
 	<link href="js/libraries/bootstrap_dropdowns_enhancement/dist/css/dropdowns-enhancement.css" rel="stylesheet">
 	<link href="js/libraries/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="js/libraries/ol3/css/ol.css" type="text/css">
-	<link href="css/overrides.css" rel="stylesheet">
 	<link href="css/map_overrides.css" rel="stylesheet">
+	<link href="css/overrides.css" rel="stylesheet">
     </head>
     <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">

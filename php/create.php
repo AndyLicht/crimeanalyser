@@ -34,7 +34,7 @@
     };
     if($_POST['modal'] == 'modal-data')
     {
-	$datetime = $_POST['date'].' '.$POST['time'];
+	$datetime = $_POST['date'].' '.$_POST['time'];
 	$query = "INSERT INTO ".$_POST['project']." VALUES (to_timestamp('".$datetime."','YYYY-MM-DD HH24:MI:SS'),'".$_POST['dataobject']."','".$_POST['datalocation']."',ST_GeometryFromText( 'POINT ( ".$_POST['dataxcoor']." ".$_POST['dataycoor'].")', 4326),'".$_POST['datadescription']."');";
 	pg_query($query);
 	echo '<br><div class="alert alert-success" role="alert">Daten erfolgreich angelegt</div>';

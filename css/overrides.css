@@ -3,15 +3,10 @@
     padding-top:50px;
     padding-bottom:50px;
 };
-
-.form-group 
+form.dataform
 {
-  margin-bottom: 0px;//Funktioniert irgendwie nicht
-}
-
-form
-{
-    display:none;
+    display: none;
+    background-color: green;
 }
 
 #stylestatus,#styleoid

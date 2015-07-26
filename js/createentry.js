@@ -14,7 +14,7 @@ $('.newdata').on('click',function()
 
 $('body').on('click','.editData',function()
 {
-    console.log('bin in der richtigen Funktion');
+    ol3map_small.updateSize();
     row = $(this).closest('tr');
     $('#dataoid').text(row.children().eq(1).text());
     $('#datatime').val(row.children().eq(2).text());
@@ -59,10 +59,8 @@ $('body').on('click','.editStyle',function()
 
 $(".createitem-formular").submit(function(event)
 {
-    /* stop form from submitting normally */
     event.preventDefault();
 
-    /* get some values from elements on the page: */
     var form = $( this ),
           url = form.attr( 'action' );
 
@@ -75,7 +73,6 @@ $(".createitem-formular").submit(function(event)
     postdata['project'] = $('#currentproject').attr('machinename');
     postdata['projectid'] = $('#currentproject').attr('projectid');
     
-    /* Send the data using post */
     var posting = $.post(url,postdata);
     posting.done(function( response )
     {
@@ -88,5 +85,13 @@ $(".createitem-formular").submit(function(event)
 	$(modal).find('.createitem-formular')[0].reset();
 	console.log('jetzt sollte das Formular ausgeblendet werden');
 	$(form).hide();
+	if($(modal).attr('id') == 'modal-projects')
+	{
+	    refresh_dropdown(base_url);
+	}
+	if($(modal).attr('id') == 'modal-styles' || $(modal).attr('id') == 'modal-data')
+	{
+	    refreshVectorSource($('#currentproject').attr('machinename'),$('#currentproject').attr('projectid'));
+	}
     });
 });
