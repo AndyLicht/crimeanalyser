@@ -38,6 +38,14 @@ $('body').on('click','#deletedatas',function()
 	{
 	    $(this).bootstrapTable('refresh');
 	});
+	if($(modal).attr('id') == 'modal-projects')
+	{
+	    refresh_dropdown(base_url);
+	}
+	if($(modal).attr('id') == 'modal-styles' || $(modal).attr('id') == 'modal-data')
+	{
+	    refreshVectorSource($('#currentproject').attr('machinename'),$('#currentproject').attr('projectid'));
+	}
     })
     .fail(function()
     {
