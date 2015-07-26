@@ -17,12 +17,6 @@ ol3map_small = new ol.Map(
     view: view_small,
 });
 
-$('#modal-data').on('shown.bs.modal', function (e) 
-{
-    ol3map_small.updateSize();
-    console.log('Husten');
-})
-
 ol3map_small.on('click', function(evt)
 {
     var coor4326 = ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326');

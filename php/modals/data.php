@@ -67,7 +67,7 @@ $modal_data = "<div id='modal-data' class='modal fade'>
                         	</thead>
                     	    </table>
                     	    <br>
-			    <form class='createitem-formular' action='php/create.php' title='' method='post'>
+			    <form id='addmodaldata' class='createitem-formular' action='php/create.php' title='' method='post'>
 				<div class='row'>
 				    <div class='col-md-6'>
 					<div class='form-group'>

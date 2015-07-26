@@ -3,12 +3,17 @@
 * Allgemeine Funktion zum Erzeugen von Projekten, Daten und Stiles.
 * leider noch überhaupt nicht allgemein
 */
+$('.createitem-formular').hide();
 /*Plus Button in jedem Modal*/
 $('.newdata').on('click',function()
 {
     modal = $(this).closest('.modal');
     form = $(modal).find('.createitem-formular');
     $(form).show();
+    if($(modal).attr('id') == 'modal-data')
+    {
+        ol3map_small.updateSize();
+    }
 });
 
 
