@@ -1,4 +1,5 @@
 //Select und Get
+/*
 ol3map.on('pointermove', function(evt)
 {
     if (evt.dragging)
@@ -8,7 +9,7 @@ ol3map.on('pointermove', function(evt)
     var pixel = ol3map.getEventPixel(evt.originalEvent);
     displayOverFeature(pixel);
     });
-
+*/
 ol3map.on('click', function(evt)
 {
     displayFeatureInfo(evt.pixel);
@@ -52,7 +53,7 @@ var displayFeatureInfo = function(pixel)
 {
     var feature = ol3map.forEachFeatureAtPixel(pixel, function(feature, layer)
     {
-    console.log(feature);
+    //console.log(feature);
 	return feature;
     });
 

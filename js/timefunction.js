@@ -137,18 +137,16 @@ function setnewStyle (timefactor)
     vectorlayer.setStyle(newstyle);
 };
 
-$('input[type=radio][name=timefilterradio]').change(function() 
+$('input[type=radio][name=timefilterradio]').change(function()
 {
-//    console.log($('input[name=timefilterradio]:checked').val());
     $.ajax({
 	    type:'GET',
 	    dataType: 'json',
-	    url: base_url+'/projekte/crimeanalyser/php/filter/gettimefilterdata_json.php',
+	    url: base_url+'/php/filter/gettimefilterdata_json.php',
 	    data: {project:$('#currentproject').attr('machinename'),filterart:$('input[name=timefilterradio]:checked').val()},
     })
     .done(function(response)
     {
-//	console.log(response);
 	timefilterdata = response;
 	timefilternumber = 0;
 	$('#clock').val('');

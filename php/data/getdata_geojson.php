@@ -25,7 +25,7 @@
 	    \"extent\":[".$bbox."]
           }
         },\"features\": [";
-	$results = pg_query($dbconn, "SELECT oid,object,time,to_char(time,'ww') as week,ST_X(the_geom),ST_Y(the_geom),location,pdescription FROM ".$_GET['machinename'].";");
+	$results = pg_query($dbconn, "SELECT oid,object,time,to_char(time,'ww') as week,ST_X(the_geom),ST_Y(the_geom),location,pdescription,to_char(time,'id') as weekday,to_char(time,'mm') as month FROM ".$_GET['machinename'].";");
 	$results_count = pg_num_rows($results);
 	$i = 0;
 	while ($row = pg_fetch_row($results))
@@ -41,6 +41,8 @@
 				{
 				    \"time\":\"".$row[2]."\",
 				    \"week\":\"".$row[3]."\",
+				    \"weekday\":\"".$row[8]."\",
+				    \"month\":\"".$row[9]."\",
 				    \"object\":\"".$row[1]."\",
 				    \"location\":\"".$row[6]."\",
 				    \"beschreibung\":\"".$row[7]."\"
@@ -62,6 +64,8 @@
 				{
 				    \"time\":\"".$row[2]."\",
 				    \"week\":\"".$row[3]."\",
+				    \"weekday\":\"".$row[8]."\",
+				    \"month\":\"".$row[9]."\",
 				    \"object\":\"".$row[1]."\",
 				    \"location\":\"".$row[6]."\",
 				    \"beschreibung\":\"".$row[7]."\"

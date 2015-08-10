@@ -10,10 +10,13 @@
     {
 	$query = "SELECT distinct(to_char(time,'ww')) as week from ".$_GET['project']." order by week;";
     }
-    else
-    {	
-	//$query = '';
-	echo 'sonstige';
+    elseif($_GET['filterart'] == 'weekday')
+    {
+	$query = "SELECT distinct(to_char(time,'id')) as weekday from ".$_GET['project']." order by weekday;";;
+    }
+elseif($_GET['filterart'] == 'month')
+    {
+	$query = "SELECT distinct(to_char(time,'mm')) as month from ".$_GET['project']." order by month;";;
     }
 
     $results = pg_query($query);
