@@ -17,22 +17,37 @@ $('#time-play').on('click',function()
 });
 
 
-
-
-function updateClock() {
+var runningstatus = true;
+var run = false;
+function updateClock()
+{
     if(timefilterdata == null)
     {
     }
     else
     {
+	run = true;
 	setTimeout(function()
 	{
 	    if(timefilterdata.length > timefilternumber+1)
 	    {	
-		$('#clock').val(timefilterdata[timefilternumber].time);
-		timefilternumber++;
-		setnewStyle(timefilterdata[timefilternumber].time);
-    		updateClock(); //Rekursion
+		if(!runningstatus)
+		{
+		    runningstatus = true;
+		    run = false;
+		    return;
+		}
+		else
+		{
+		    $('#clock').val(timefilterdata[timefilternumber].time);
+		    timefilternumber++;
+		    setnewStyle(timefilterdata[timefilternumber].time);
+    		    updateClock(); //Rekursion
+		}
+	    }
+	    else
+	    {
+		run = false;
 	    }
 	}, $('#intervall').val()*1000);
     };
@@ -42,7 +57,10 @@ function updateClock() {
 $('#time-reset').on('click',function()
 {
     $(".recorder").removeClass('active');
-    realrecord = 'stop';
+    if(run)
+    {
+	runningstatus = false;
+    }
     $('#clock').val($('.timelap').first().text());
     timefilternumber = 0;
     setnewStyle(false);
